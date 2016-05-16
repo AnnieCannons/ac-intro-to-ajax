@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>AnnieCannons AJAX/JSON slides</title>
+
+    <meta name="description" content="AnnieCannons class slides">
+    <meta name="author" content="AnnieCannons">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/league.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+        <!--Introduction slide-->
+        <section>
+            <h2>Asynchronous Technologies: AJAX/JSON</h2>
+            <aside class="notes">Note: We're not using an API in this class, we're just going over the concept of AJAX.</aside>
+        </section>
+        <!--/Intro Slides-->
+        
+        <!-- Slide 1 -->
+        <section>
+            <h2>
+                Let's Review
+            </h2>
+            <p>
+               How do JavaScript and HTML work together?
+            </p>
+            <ol>
+                <li class="fragment">Static Content and Progressive Enhancement</li>
+                <li class="fragment">Dynamic Content</li>
+            </ol>
+            <aside class="notes"></aside>
+        </section> 
+
+        <!-- Slide 2 -->
+        <section>
+            <h2>
+                1)Static Content + Progressive Enhancement
+            </h2>
+            <ul>
+                <li class="fragment">Progressive enhancement uses web technologies in a layered fashion that allows everyone to access the basic content and functionality of a web page, using any browser or Internet connection</li>
+                <li class="fragment">It also provides an enhanced version of the page to those with more advanced browser software or greater bandwidth.</li>
+            </ul>
+            <aside class="notes"></aside>
+        </section>
+        
+        <!-- Slide 3 -->
+        <section>
+            <h2>
+                1)Static Content + Progressive Enhancement
+            </h2>
+            <img src="images/image2.png">
+            <br>
+            <a href="http://www.teaching-materials.org/jquery2/exercises/exercise_events_solution.html">Example</a>
+            <aside class="notes"></aside>
+        </section>
+
+        <!-- Slide 4 -->
+        <section>
+            <h2>
+                2)Dynamic Content
+            </h2>
+            <p>Adding Data (often user data)!</p>
+            <img src="images/dynamic_content.png">
+            <aside class="notes"></aside>
+        </section> 
+        
+        <!-- Slide 5 -->
+        <section>
+            <h2>
+                Using JavaScript to turn JSON into DOM
+            </h2>
+            <p>JSON = JavaScript Object Notation </p>
+            <ul>
+                <li class="fragment">JSON is all about transmitting data objects </li>
+                <li class="fragment">This is a way to store data!</li>
+            </ul>
+            <aside class="notes"></aside>
+        </section>
+
+        <!-- Slide 6 -->
+        <section>
+            <h2>
+                How does JSON work?
+            </h2>
+            <ul>
+                <li class="fragment">Using Key/Value pairs</li>
+                <li class="fragment">Keys must be stored with quotes (unlike JS Objects)</li>
+                <li class="fragment">Value can be the following data types: Number, String, Boolean, Array, Object, null</li>
+                <li class="fragment">Resembles objects in JS</li>
+                <li class="fragment">Validate @ <a href="http://jsonlint.com">JSONLint.com</a></li>
+            </ul>
+            <aside class="notes"></aside>
+        </section> 
+
+        <!-- Slide 7 -->  
+        <section>
+            <h2>
+                  Example
+            </h2>
+            <pre><code class="hljs" data-trim contenteditable>
+{
+ "firstName": "Jane", 
+ "lastName": "Smith", 
+ "address": { 
+   "streetAddress": "425 2nd Street", 
+   "city": "San Francisco", 
+   "state": "CA", 
+   "postalCode": 94107 
+ }, 
+ "phoneNumbers": [ 
+   "212 732-1234", 
+   "646 123-4567" ] 
+} 
+            </code></pre>
+            <aside class="notes"></aside>
+          </section> 
+                
+        <!-- Slide 8 -->        
+        <section>
+            <h2>
+                Example 2
+            </h2>
+            <pre><code class="hljs" data-trim contenteditable>
+var myProfile = 
+ {"firstName": "Liz", 
+  "lastName": "Howard",
+  "cats": ["Tribbles", "Jean Claws"]};
+
+var p = document.createElement('p');
+p.innerHTML = 'My name is ' + 
+myProfile.firstName + ' ' + myProfile.lastName + '. ';
+p.innerHTML += 'My cats are ' + 
+myProfile.cats.join(', ') + '.';
+
+
+var p = $('&lt;p&gt;');
+p.html('My name is ' + myProfile.firstName + ' ' +
+ myProfile.lastName + '. ');
+p.append('My cats are ' + myProfile.cats.join(', ') + '.');
+            </code></pre>
+            <aside class="notes"></aside>
+        </section> 
+                
+        <!-- Slide 9 -->        
+        <section>
+            <h2>
+                Exercise Time!
+            </h2>
+            <p>
+               Follow this <a href="http://www.teaching-materials.org/ajax/exercise_json.html" target="_blank">link</a>
+            </p>
+            <aside class="notes"></aside>
+        </section> 
+        
+        <!-- Slide 10 -->
+        <section>
+            <h2>
+                What does asynchronous mean?
+            </h2>
+            <p>
+               Asynchronous technologies enable users to access information or communicate at different points of time, usually at the time of choice of the user.
+            </p>
+            <aside class="notes"></aside>
+        </section> 
+
+        <!-- Slide 11 -->
+        <section>
+            <p>
+               The traditional data-driven web application is written so that it:
+            </p>
+            <ol>
+                <li class="fragment">Displays a webpage</li>
+                <li class="fragment">Waits for user interaction</li>
+                <li class="fragment">Asks the server for data</li>
+                <li class="fragment">Reloads the webpage</li>
+            </ol>
+            <aside class="notes"></aside>
+        </section> 
+        
+        <!-- Slide 12 -->
+        <section>
+            <h2>
+                Sad Users
+            </h2>
+            <p>
+               This has the effect that the user has "down time" - there is a period of time where they can't interact with the webpage at all
+            </p>
+            <img src="images/smiley_sad-512.png">
+            <aside class="notes"></aside>
+        </section> 
+
+        <!-- Slide 13 -->
+        <section>
+            <h2>
+                AJAX
+            </h2>
+            <p>AJAX = "Asynchronous JavaScript and XML."</p>
+            <ul>
+                <li class="fragment">AJAX is a technique for creating fast and dynamic web pages.</li>
+                <li class="fragment">You can update parts of your web page, without reloading the whole page!</li>
+                <li class="fragment">Examples of applications using AJAX: Google Maps, Gmail, YouTube, and Facebook.</li>
+            </ul>
+            <aside class="notes"></aside>
+        </section> 
+        
+        <!-- Slide 14 -->
+        <section>
+            <h2>
+                AJAX
+            </h2>
+            <ul>
+                <li class="fragment">Allows for asynchronous data transfer between a webpage and a web server.</li>
+                <li class="fragment">Javascript tells the browser to retrieve a particular URL and send the data back to the webpage.</li>
+            </ul>
+            <aside class="notes"></aside>
+        </section> 
+        
+        <!-- Slide 15 -->
+        <section>
+            <h2>
+                Let's talk about this diagram
+            </h2>
+            <img src="images/ajax.png">
+            <aside class="notes"></aside>
+        </section> 
+        
+        <!-- Slide 16 -->
+        <section>
+            <h2>
+                AJAX in the Wild
+            </h2>
+            <a href="https://www.airbnb.com/wishlists/popular" target="_blank"><img src="images/airbnb.png"></a>
+            <p>
+               What else?
+            </p>
+            <aside class="notes"></aside>
+        </section> 
+        
+        <!-- Slide 17 -->
+        <section>
+            <h2>
+                Web 1.0 and User Interaction
+            </h2>
+            <img src="images/web_user_int1.png">
+            <aside class="notes"></aside>
+        </section> 
+               
+        <!-- Slide 18 --> 
+        <section>
+            <h2>
+                Web 2.0 and User Interaction
+            </h2>
+            <img src="images/web_user_int2.png">
+            <aside class="notes"></aside>
+        </section>
+
+        <!-- Slide 19 -->
+        <section>
+            <h2>
+                Importance of AJAX for Web 2.0 Programming
+            </h2>
+            <ul>
+                <li class="fragment">The user can still interact with other parts of the page while one part is loading.</li>
+                <li class="fragment"> The user can selectively load the content they're interested in.</li>
+                <li class="fragment">This is arguably the most important part of Web 2.0 programming!</li>
+            </ul>
+            <aside class="notes"></aside>
+        </section> 
+        
+        <!-- Slide 20 -->
+        <section>
+            <h2>
+                Web 1.0 vs. Web 2.0
+            </h2>
+            <table>
+            <tr>
+              <td><img src="images/web_user_int1.png" width="75%"></td>
+              <td><img src="images/web_user_int2.png" width="75%"></td>
+            </tr>
+            <tr>
+              <td>Technologies Used:</td>
+              <td>Technologies Used:</td>
+            </tr>
+            <tr>
+              <td style="vertical-align:top">
+                <ul>
+                  <li>HTML</li>
+                  <li>Server-Side Scripts</li>
+                </ul>
+              </td>
+              <td style="vertical-align:top">
+                <ul>
+                  <li>HTML</li>
+                  <li>Server-Side Scripts</li>
+                  <li>
+                    AJAX
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </table>
+            <aside class="notes"></aside>
+        </section> 
+    
+        <!-- Slide 21 -->
+        <section>
+            <h2>
+                Requests and Responses
+            </h2>
+            <img src="images/2.jpg">
+            <aside class="notes"></aside>
+        </section> 
+        
+        <!-- Slide 22 -->
+        <section>
+            <h2>
+                Requests and Responses
+            </h2>
+            <ul>
+                <li class="fragment"><strong>Front-End: </strong>Hey, Back-End! Here's my credentials. Can I get some data? How about books on AJAX?</li>
+                <li class="fragment"><strong>Back-End </strong><em>thinks about it, decides how to handle request...looks in database, searches...</em></li>
+                <li class="fragment"><strong>Back-End: </strong>200 OK, here are some books on AJAX!</li>
+                <li class="fragment"><strong>Front-End: </strong>Thanks! I'm going to make an online bookshelf with the data!</li>
+            </ul>
+            <aside class="notes"></aside>
+        </section> 
+        
+        <!-- Slide 23 -->
+        <section>
+            <h2>
+                How does this communicating take place?
+            </h2>
+            <aside class="notes"></aside>
+        </section> 
+        
+        <!-- Slide 24 -->
+        <section>
+            <h2>
+                XMLHttpRequest
+            </h2>
+            <p>
+               XMLHttpRequest (XHR) is an API (woohoo!) available to web browser scripting languages such as JavaScript. It is used to send HTTP or HTTPS requests to a web server and load the server response data back into the script.
+            </p>
+            <ul>
+                <li class="fragment">Don't worry about the XML part</li>
+                <li class="fragment">We can just use HTML or JSON!</li>
+                <li class="fragment"><a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">Click here to learn more</a></li>
+            </ul>
+            <aside class="notes"></aside>
+        </section> 
+        
+        <!-- Slide 25 -->
+        <section>
+            <h2>
+                Anatomy of an XMLHttpRequest
+            </h2>
+            <pre><code class="hljs" data-trim contenteditable>
+// instantiate a new request
+var request = new XMLHttpRequest(); 
+
+// add event listeners
+request.addEventListener('load', function () {
+
+  // transform a string into a usable object
+  console.log(JSON.parse(request.responseText));
+});
+
+request.open('get', '/path/to/api', true);
+request.setRequestHeader('Content-type', 'application/json');
+request.send();
+            </code></pre>
+            <aside class="notes"></aside>
+        </section> 
+        
+        <!-- Slide 26 -->
+        <section>
+            <h2>
+                BUT! We don't need to write all that code...
+            </h2>
+            <aside class="notes"></aside>
+        </section> 
+        
+        <!-- Slide 27 -->
+        <section>
+            <h2>
+                jQuery and AJAX
+            </h2>
+            <p>
+               We can use the jQuery $.<a href="http://api.jquery.com/jQuery.ajax/">ajax</a> function.</p>
+            </p>
+             <pre><code class="hljs" data-trim contenteditable>
+$.ajax({type: "GET",
+  url: "filename.json",
+  dataType: "json",
+  success: function(data) { },
+  error: function(xhr, status, e) { }
+});    
+            </code></pre>
+            <aside class="notes"></aside>
+        </section> 
+        
+        <!-- Slide 28 -->
+        <section>
+            <h2>
+                Using jQuery for everything
+            </h2>
+            <pre><code class="hljs" data-trim contenteditable>
+$.ajax({type: "GET",
+  url: "books.json",
+  dataType: "json",
+  success: function(books) { 
+    for (var i = 0; i < books.length; i++) { 
+      var book = books[i];
+      var p = $('&lt;p&gt;');
+      p.html(book.title + ' by ' + book.author);
+      $('body').append(p);
+    }
+  },
+  error: function(xhr, status, e) {
+    console.log(status, e);
+  }
+});
+            </code></pre>
+            <aside class="notes"></aside>
+        </section> 
+        
+        <!-- Slide 29 -->
+        <section>
+            <h2>
+                Remember!
+            </h2>
+            <p>
+               jQuery is just a library, written by human beings. Use it because it saves you time, but don't rely too hard on it!
+            </p>
+            <aside class="notes"></aside>
+        </section> 
+    
+        <!-- Slide 30 -->
+        <section>
+            <h2>
+                Debugging AJAX Requests
+            </h2>
+            <ul>
+                <li class="fragment">Click the NET/Network tab in Chrome Dev Tools or Firebug, select "XHR" filter to see all XMLHttpRequests made.</li>
+                <li class="fragment">See what the request responded with by clicking its "Response" tab.</li>
+                <li class="fragment">Explore this tab! It will teach you so much about what's in requests and responses. (Google everything you don't understand.)</li>
+                <li class="fragment">Visit <a href="https://www.airbnb.com/wishlists/popular" target="_blank">this link</a> again.</li>
+            </ul>
+            <aside class="notes"></aside>
+        </section> 
+        
+        <!-- Slide 31 -->
+        <section>
+            <h2>
+                Exercise Time!
+            </h2>
+            <p>
+               Follow this <a href="http://www.teaching-materials.org/ajax/exercise_ajax.html" target="_blank">link</a>
+            </p>
+            <aside class="notes"></aside>
+        </section> 
+
+        <!-- Slide 32 -->
+        <section>
+            <h2>
+                AJAX + Servers
+            </h2>
+            <p>
+               Looking at "GET" and "POST"
+            </p>
+            <pre><code class="hljs" data-trim contenteditable>
+$.ajax({type: "GET",
+  url: "/api/books",
+  dataType: "json",
+  data: {'sortBy': 'author'},
+  success: processBooks
+});
+
+$.ajax({type: "POST",
+  url: "/api/book/new",
+  dataType: "json",
+  data: {'title': 'I, Robot', 'author': 'I. Asimov'}
+  success: processBoooks
+});
+            </code></pre>
+            <aside class="notes"></aside>
+        </section> 
+        
+        <!-- Slide 33 -->
+        <section>
+            <h2>
+                Cross Domain Policy
+            </h2>
+            <ul>
+                <li class="fragment">The same-origin policy restricts how a document or script loaded from one origin can interact with a resource from another origin. </li>
+                <li class="fragment">It is a critical security mechanism for isolating potentially malicious documents.</li>
+                <li class="fragment">Two pages have the same origin if the protocol, port (if one is specified), and host are the same for both pages. The following table gives examples of origin comparisons:</li>
+            </ul>
+            <aside class="notes"></aside>
+        </section> 
+    
+        <!-- Slide 34 -->
+        <section>
+            <h2>
+                Cross Domain Policy
+            </h2>
+            <p>
+               For http://store.company.com/dir/page.html:
+            </p>
+            <img src="images/cross_domain_policy.png">
+            <aside class="notes"></aside>
+        </section> 
+        
+        <!-- Slide 35 -->
+        <section>
+            <h2>
+                Important AJAX Reminders
+            </h2>
+            <ul>
+                <li class="fragment">Cross domain requests have restrictions</li>
+                <li class="fragment"> Multiple AJAX requests don't return in order</li>
+                <li class="fragment">Hard to transfer files</li>
+                <li class="fragment">Browsers can over-cache/under-cache requests</li>
+                <li class="fragment">Can't transfer binary content</li>
+            </ul>
+            <aside class="notes"></aside>
+        </section> 
+        
+        <!-- Slide 36 -->
+        <section>
+            <h2>
+                Example using an API
+            </h2>
+            <p> We will check out this example using Meetup's API
+               <a href="http://codepen.io/btholt/pen/FArdh" target="_blank">Click here</a>
+            </p>
+            <aside class="notes"></aside>
+        </section> 
+        
+
+        <!-- Slide 37 -->
+        <section>
+            <h2>
+                What is happening?
+            </h2>
+            <p>
+               (Let's add the Chrome extension JSON formatter)
+            </p>
+            <aside class="notes"></aside>
+        </section> 
+        
+        <section>
+            <h2>
+                Let's display the data!
+            </h2>
+            <pre><code class="hljs" data-trim contenteditable>
+$.ajax({
+type:"GET",
+url:"https://api.meetup.com/2/cities",
+success: function(data) {
+  $('.text').html('');
+  for (var i = 0; i < data.results.length; i++){
+  var place = data.results[i].city + "," + 
+  data.results[i].state;
+  $(".text").append("<p>" + place + "</p>"):
+}},
+
+            </code></pre>
+            <p>What happens?</p>
+            <aside class="notes"></aside>
+        </section> 
+            
+        <section>
+            <h2>
+                Another exercise
+            </h2>
+            <p>
+               <a href="http://codepen.io/btholt/pen/Aejsl" target="_blank">Click here</a>
+            </p>
+            <aside class="notes"></aside>
+        </section> 
+        
+
+        <!-- Slide 36 -->
+        <section>
+            <h2>
+                List of additional key concepts
+            </h2>
+            <ul>
+                <li class="fragment">What are the parts of an HTTP request?</li>
+                <li class="fragment">What does CRUD stand for?</li>
+                <li class="fragment">What is the same origin policy?</li>
+                <li class="fragment">What are the 4 basic CRUD operations and methods?</li>
+                <li class="fragment">What is the difference between JSONP and JSON?</li>
+            </ul>
+            <aside class="notes"></aside>
+        </section>
+
+        <!-- End Slide -->
+        <section style="text-align: left;">
+            <h1>THE END</h1>
+            <p>Thank you for your attention!</p>
+        </section>
+
+    </div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+            {
+                src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            }
+            },
+            {
+                src: 'plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            }
+            },
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            }
+            },
+            {src: 'plugin/zoom-js/zoom.js', async: true},
+            {src: 'plugin/notes/notes.js', async: true}
+        ]
+    });
+
+</script>
+
+</body>
+</html>
