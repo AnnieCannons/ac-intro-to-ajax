@@ -161,7 +161,22 @@
           </section> 
                 
                 <section>
-            <h2>ASIDE!</h2>
+            <h2>IMPORTANT ASIDE!</h2>
+        </section>
+
+        <section>
+            <h2>High-Order Functions</h2>
+            <p class="fragment">A high-order function is one that either:</p>
+            <ul>
+                <li class="fragment">takes a function as an input (argument)</li>
+                <li class="fragment">returns a function as the output. </li>
+            </ul>
+            <p class="fragment">We have done a lot of #2 with closures. We are going to talk about number 1. We have done this before. Anyone remember? </p>
+        </section>
+
+        <section>
+            <h2>Event listeners! (clicks, etc)</h2>
+            <img src="images/event.png" alt="">
         </section>
 
         <section>
@@ -197,6 +212,20 @@ fullName("Jackie", "Chan", greeting);
         <section>
             <h2>Another Example</h2>
 <pre><code class="hljs" data-trim contenteditable>
+var increment = function(n){ return n + 1; };
+var square = function(n) { return n*n; };
+
+var doMathSoIDontHaveTo = function (n, func){
+    return func(n);
+};
+doMathSoIDontHaveTo(5, square);
+doMathSoIDontHaveTo(4, increment);
+</code></pre>
+        </section>
+
+        <section>
+            <h2>Another Example</h2>
+<pre><code class="hljs" data-trim contenteditable>
 function publish(item, author, callback){   // Generic function with common data
   console.log(item);
   var date = new Date();
@@ -221,10 +250,25 @@ publish("10 Tips for JavaScript Developers", "Jane Doe", articles);
 </code></pre>
         </section>
 
+        <section>
+            <h2>Callback If Statements</h2>
+            <img src="images/ifstatement.png" alt="">
+        </section>
+
+        <section>
+            <h2>Callback with a Closure</h2>
+            <img src="images/async.png" alt="">
+        </section>
+
+        <section>
+            <h2>Callback Exercise</h2>
+            <p><a href="https://github.com/bgando/functionalJS/blob/master/callbacks/callbackExercises.md">Click here</a></p>
+        </section>
+
         <!-- Slide 9 -->        
         <section>
             <h2>
-                Exercise Time!
+                JSON Exercise Time!
             </h2>
             <p>
                Follow this <a href="http://www.teaching-materials.org/ajax/exercise_json.html" target="_blank">link</a>
