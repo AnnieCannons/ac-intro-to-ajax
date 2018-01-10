@@ -1,16 +1,23 @@
 # AnnieCannons Lecture on AJAX/JSON
 
-Here you will find the information for our unit on AJAX and JSON. Enjoy!
+This module introduces how to make calls to server-side JS. You will be able to send as well as receive information in different of formats all using JavaScript. It includes:
 
-How to use this repo:
+<ul>
+<li>Introducing Callbacks</li>
+<li>Understanding Async</li>
+<li>How has JS evolved?</li>
+<li>Working with Data</li>
+<li>JSON (JavaScript Object Notation)</li>
+<li>XMLHttpRequests</li>
+<li>Using jQuery to make AJAX calls</li>
+<li>Nexted Data Structures</li>
+<li>Using Online APIs</li>
+<li>Other data types</li>
+</ul>
 
-Start with the slides which are linked at the top of the page.
-
-You will also find links in the slides to exercises and other goodies.
-
-For this particular unit, look here for more readings:
-
-JSON Validator http://jsonlint.com/
+# Resources
+1)JSON Validator http://jsonlint.com/
+2) Nina and Brian's Talk on Introduction to Web Development in Frontend Masters or Pluralsight
   
   ### More info
   
