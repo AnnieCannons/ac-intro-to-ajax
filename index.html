@@ -48,112 +48,6 @@
             <h2>Introduction to AJAX and JSON</h2>
         </section>
         <!--/Intro Slides-->
-
-        <section>
-            <h2>IMPORTANT ASIDE!</h2>
-        </section>
-
-        <section>
-            <h2>High-Order Functions</h2>
-            <p class="fragment">A high-order function is one that either:</p>
-            <ul>
-                <li class="fragment">takes a function as an input (argument)</li>
-                <li class="fragment">returns a function as the output. </li>
-            </ul>
-            <p class="fragment">We have done a lot of #2 with closures. We are going to talk about number 1. We have done this before. Anyone remember? </p>
-        </section>
-
-        <section>
-            <h2>Event listeners! (clicks, etc)</h2>
-            <img src="images/event.png" alt="">
-        </section>
-
-        <section>
-            <h2>What is a callback?</h2>
-            <p>In JavaScript, functions are first-class objects. One of the consequences of this fact is that functions can be passed as arguments to other functions and can also be returned by other functions.</p>
-        </section>
-
-        <section>
-            <h2>Callbacks</h2>
-            <p class="fragment">A function that takes other functions as arguments or returns functions as its result is called a higher-order function, and the function that is passed as an argument is called a callback function. It’s named “callback” because at some point in time it is “called back” by the higher-order function.</p>
-            <p class="fragment">They are great with Event Listeners and Ajax!</p>
-        </section>
-
-        <section>
-            <img src="images/ryan-gosling-callback.jpg" alt="">
-        </section>
-
-        <section>
-<pre><code class="hljs" data-trim contenteditable>
-function fullName(firstName, lastName, callback){
-  console.log("My name is " + firstName + " " + lastName);
-  callback(lastName);
-}
-
-var greeting = function(ln){
-  console.log('Welcome Mr. ' + ln);
-};
-
-fullName("Jackie", "Chan", greeting);
-</code></pre>
-        </section>
-
-        <section>
-            <h2>Another Example</h2>
-<pre><code class="hljs" data-trim contenteditable>
-var increment = function(n){ return n + 1; };
-var square = function(n) { return n*n; };
-
-var doMathSoIDontHaveTo = function (n, func){
-    return func(n);
-};
-doMathSoIDontHaveTo(5, square);
-doMathSoIDontHaveTo(4, increment);
-</code></pre>
-        </section>
-
-        <section>
-            <h2>Another Example</h2>
-<pre><code class="hljs" data-trim contenteditable>
-function publish(item, author, callback){   // Generic function with common data
-  console.log(item);
-  var date = new Date();
-
-  callback(author, date);
-}
-
-function messages(author, time){   // Callback function with specific data
-  var sendTime = time.toLocaleTimeString();
-  console.log("Sent from " + author + " at " + sendTime);
-}
-
-function articles(author, date){   // Callback function with specific data
-  var pubDate = date.toDateString();
-  console.log("Written by " + author);
-  console.log("Published " + pubDate);
-}
-
-publish("How are you?", "Monique", messages);
-
-publish("10 Tips for JavaScript Developers", "Jane Doe", articles);
-</code></pre>
-        </section>
-
-        <section>
-            <h2>Callback If Statements</h2>
-            <img src="images/ifstatement.png" alt="">
-        </section>
-
-        <section>
-            <h2>Callback with a Closure</h2>
-            <img src="images/async.png" alt="">
-        </section>
-
-        <section>
-            <h2>Callback Exercise</h2>
-            <p>Write a function, poemMaker, that takes in one parameter: 1) a person's name (string). The code should log to the console the sentence "[Person's name] is finer than fine wine. Altruistic and noble for the modern time". Create a second function, getUserInput that takes in three parameters: 1) firstName (string), lastName(string), and a callback. This function should concatenate the names and execute the poemMaker functions as a callback.
-            </p>
-        </section>
    
         <!-- Slide 1 -->
         <section>
@@ -286,6 +180,13 @@ publish("10 Tips for JavaScript Developers", "Jane Doe", articles);
             </p>
             <aside class="notes"></aside>
         </section> 
+
+        <section>
+            <h2>Asynchronous Analogy</h2>
+            <p>A bank teller that only serves one person can only serve that one person at a time</p>
+            <p>VERSUS </p>
+            <p>Multiple tellers who can see multiple people but all access the same back room.</p>
+        </section>
 
         <!-- Slide 11 -->
         <section>
@@ -575,7 +476,15 @@ $.ajax({type: "GET",
         </section> 
         
         <!-- Slide 31 -->
+        <section>
+            <h2>Server Status Responses</h2>
+            <img src="images/statuscode1.png" alt="Server Status Codes">
+        </section>
+            <h2>Server Status Responses</h2>
+            <img src="images/statuscode2.png" alt="Server Status Codes">
+        <section>
 
+        </section>
         <!-- Slide 32 -->
         <section>
             <h2>
