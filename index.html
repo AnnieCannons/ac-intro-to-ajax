@@ -45,56 +45,50 @@
 
         <!--Introduction slide-->
         <section>
-            <h2>Introduction to AJAX and JSON</h2>
+            <h2>Introduction to Async and JSON</h2>
         </section>
         <!--/Intro Slides-->
    
         <!-- Slide 1 -->
+       
         <section>
             <h2>
-                Let's Review
+                How do JavaScript and HTML work together?
             </h2>
             <p>
-               How do JavaScript and HTML work together?
+                <span style="color:yellow" >1. Static content and user interactions!</span>  
             </p>
             <ol>
-                <li class="fragment">Static Content and Progressive Enhancement</li>
-                <li class="fragment">Dynamic Content</li>
+                <li class="fragment">Think a simple website</li>
+                <li class="fragment">Everyone accesses the basic content and functionality of a web page, using any browser or Internet connection</li>
+                <li class="fragment">The website can respond to user driven events. This can update the UI</li>
             </ol>
-            <aside class="notes"></aside>
         </section> 
 
         <!-- Slide 2 -->
-        <section>
-            <h2>
-                1) Static Content + Progressive Enhancement
-            </h2>
-            <ul>
-                <li class="fragment">Progressive enhancement uses web technologies in a layered fashion that allows everyone to access the basic content and functionality of a web page, using any browser or Internet connection</li>
-            </ul>
-            <aside class="notes"></aside>
-        </section>
 
-        <!-- Slide 2.1 -->
         <section>
             <h2>
-                1) Static Content + Progressive Enhancement
+                How do JavaScript and HTML work together?
             </h2>
-            <p>This also provides an enhanced version of the page to those with more advanced browser software or greater bandwidth.</li>
+            <p>
+                <span style="color:yellow" >2. Dynamic Content and More Data</span>
             </p>
-            <aside class="notes"></aside>
+            <ol>
+                <li class="fragment">Think a complicated web applications</li>
+                <li class="fragment">Everyone can log in and create their own accounts. This will load specific data depending on the user interactions. The "shell" of the app is the same for all users, but the content is dynamic.</li>
+                <li class="fragment">What are some examples?</li>
+            </ol>
         </section> 
-            
         
         <!-- Slide 3 -->
         <section>
             <h2>
-                1)Static Content + Progressive Enhancement
+                1) Static Content
             </h2>
             <img src="images/image2.png">
             <br>
-            <a href="images/practice.html">Example</a>
-            <aside class="notes"></aside>
+            <p>A click from the user changes the UI, but the data is the same of all users.</a>
         </section>
 
         <!-- Slide 4 -->
@@ -104,18 +98,32 @@
             </h2>
             <p>Adding Data (often user data)!</p>
             <img src="images/dynamic_content.png">
-            <aside class="notes"></aside>
+            <p>New unique data is added specifically for the user who is currently using the app.</a>
         </section> 
+
+        <section>
+            <h2>Where is user data stored?</h2>
+            <img class="fragment" src="images/internet.gif" alt="Internet Gif">
+            <p class="fragment">In databases across the Internet!</p>
+        </section>
+
+        <section>
+            <h2>Remember!</h2>
+            <p><span style="color: yellow">Backend</span> languages handle the requests for data about users. <span style="color: lightpink">Databases</span>  hold all of the information about our users.</p>
+            <p>What happens if that language is different from JavaScript? And how do we make those requests?</p>
+            <img src="images/thinking.gif" alt="Thinking Gif">
+        </section>
         
         <!-- Slide 5 -->
         <section>
             <h2>
-                Using JavaScript to turn JSON into DOM
+                Sending/Receiving Data Across the Internet
             </h2>
             <p>JSON = JavaScript Object Notation </p>
             <ul>
                 <li class="fragment">JSON is all about transmitting data objects </li>
-                <li class="fragment">This is a way to store data!</li>
+                <li class="fragment">This is a way to store and send data!</li>
+                <li class="fragment">JSON can be read by all sorts of backend platforms and databases.</li>
             </ul>
             <aside class="notes"></aside>
         </section>
@@ -167,6 +175,7 @@
             <p>
                Follow this <a href="http://www.teaching-materials.org/ajax/exercise_json.html" target="_blank">link</a>
             </p>
+            <img src="images/exercise.gif" alt="Exercise Time">
             <aside class="notes"></aside>
         </section> 
         
@@ -213,51 +222,14 @@
             <img src="images/smiley_sad-512.png">
             <aside class="notes"></aside>
         </section> 
-
-        <!-- Slide 13 -->
-        <section>
-            <h2>
-                AJAX
-            </h2>
-            <p>AJAX = "Asynchronous JavaScript and XML."</p>
-            <ul>
-                <li class="fragment">AJAX is a technique for creating fast and dynamic web pages.</li>
-                <li class="fragment">You can update parts of your web page, without reloading the whole page!</li>
-                <li class="fragment">Examples of applications using AJAX: Google Maps, Gmail, YouTube, and Facebook.</li>
-            </ul>
-            <aside class="notes"></aside>
-        </section> 
-        
-        <!-- Slide 14 -->
-        <section>
-            <h2>
-                AJAX
-            </h2>
-            <ul>
-                <li class="fragment">Allows for asynchronous data transfer between a webpage and a web server.</li>
-                <li class="fragment">Javascript tells the browser to retrieve a particular URL and send the data back to the webpage.</li>
-            </ul>
-            <aside class="notes"></aside>
-        </section> 
-        
-        <!-- Slide 15 -->
-        <section>
-            <h2>
-                Let's talk about this diagram
-            </h2>
-            <img src="images/ajax.png">
-            <aside class="notes"></aside>
-        </section> 
         
         <!-- Slide 16 -->
         <section>
             <h2>
-                AJAX in the Wild
+                Async in the Wild
             </h2>
             <a href="https://www.airbnb.com/wishlists/popular" target="_blank"><img src="images/airbnb.png"></a>
-            <p>
-               What else?
-            </p>
+            <p>As you load more listings on Airbnb, you are sending requests for more data.</p>
             <aside class="notes"></aside>
         </section> 
         
@@ -282,7 +254,7 @@
         <!-- Slide 19 -->
         <section>
             <h2>
-                Importance of AJAX for Web 2.0 Programming
+                Importance of Async for Web 2.0 Programming
             </h2>
             <ul>
                 <li class="fragment">The user can still interact with other parts of the page while one part is loading.</li>
@@ -318,7 +290,7 @@
                   <li>HTML</li>
                   <li>Server-Side Scripts</li>
                   <li>
-                    AJAX
+                    Async Tools (Ajax, Fetch, APIs)
                   </li>
                 </ul>
               </td>
@@ -356,6 +328,44 @@
             <h2>
                 How does this communicating take place?
             </h2>
+            <p class="fragment">There are different methods for making async requests, and new ones are being added all the time.</p>
+            <p class="fragment">We will talk about 2: AJAX and Fetch</p>
+            <img class="fragment" src="images/fetch.gif" alt="So Fetch">
+            <aside class="notes"></aside>
+        </section> 
+
+        <!-- Slide 13 -->
+        <section>
+            <h2>
+                AJAX
+            </h2>
+            <p>AJAX = "Asynchronous JavaScript and XML."</p>
+            <ul>
+                <li class="fragment">AJAX is a technique for creating fast and dynamic web pages.</li>
+                <li class="fragment">You can update parts of your web page, without reloading the whole page!</li>
+                <li class="fragment">Examples of applications using AJAX: Google Maps, Gmail, YouTube, and Facebook.</li>
+            </ul>
+            <aside class="notes"></aside>
+        </section> 
+        
+        <!-- Slide 14 -->
+        <section>
+            <h2>
+                AJAX
+            </h2>
+            <ul>
+                <li class="fragment">Allows for asynchronous data transfer between a webpage and a web server.</li>
+                <li class="fragment">Javascript tells the browser to retrieve a particular URL and send the data back to the webpage.</li>
+            </ul>
+            <aside class="notes"></aside>
+        </section> 
+        
+       <!-- Slide 15 -->
+       <section>
+            <h2>
+                Let's talk about this diagram
+            </h2>
+            <img src="images/ajax.png">
             <aside class="notes"></aside>
         </section> 
         
@@ -365,7 +375,7 @@
                 XMLHttpRequest
             </h2>
             <p>
-               XMLHttpRequest (XHR) is an API (woohoo!) available to web browser scripting languages such as JavaScript. It is used to send HTTP or HTTPS requests to a web server and load the server response data back into the script.
+               XMLHttpRequest (XHR) is an API (we will cover these next) available to web browser scripting languages such as JavaScript. It is used to send HTTP or HTTPS requests to a web server and load the server response data back into the script.
             </p>
             <ul>
                 <li class="fragment">Don't worry about the XML part</li>
@@ -467,8 +477,9 @@ $.ajax({type: "GET",
                 Debugging AJAX Requests
             </h2>
             <ul>
-                <li class="fragment">Click the NET/Network tab in Chrome Dev Tools or Firebug, select "XHR" filter to see all XMLHttpRequests made.</li>
-                <li class="fragment">See what the request responded with by clicking its "Response" tab.</li>
+                <li class="fragment">Open the Dev Tools and go to Network. Select "XHR" filter to see all XMLHttpRequests made.</li>
+                <li class="fragment">Refresh the page</li>
+                <li class="fragment">See what the request responded with by clicking one of the elements and then its "Response" tab.</li>
                 <li class="fragment">Explore this tab! It will teach you so much about what's in requests and responses. (Google everything you don't understand.)</li>
                 <li class="fragment">Visit <a href="https://www.airbnb.com/wishlists/popular" target="_blank">this link</a> again.</li>
             </ul>
@@ -550,11 +561,12 @@ $.ajax({type: "POST",
         <!-- Slide 36 -->
         <section>
             <h2>
-                Example using an API
+                Exercise using an API
             </h2>
             <p> We will check out this example using Meetup's API
                <a href="http://codepen.io/btholt/pen/FArdh" target="_blank">Click here</a>
             </p>
+            <img src="images/exercise.gif" alt="Exercise Time">
             <aside class="notes"></aside>
         </section> 
         
@@ -593,30 +605,32 @@ success: function(data) {
             
         <section>
             <h2>
-                Another exercise
+                Ajax exercise
             </h2>
             <p>
                <a href="http://codepen.io/btholt/pen/Aejsl" target="_blank">Click here</a>
             </p>
-            <aside class="notes"></aside>
-        </section> 
-        
-        <section>
-            <h2>
-                Exercise Time!
-            </h2>
-            <p>
-               Follow this <a href="http://www.teaching-materials.org/ajax/exercise_ajax.html" target="_blank">link</a>
-            </p>
-            <aside class="notes"></aside>
+            <img src="images/exercise.gif" alt="Exercise Time">
         </section> 
 
         <section>
             <h2>What are other ways to be async in JS?</h2>
             <ul>
+                <li><a href="https://css-tricks.com/using-fetch/">Fetch</a></li>
                 <li><a href="https://developers.google.com/web/fundamentals/primers/promises">Promises</a></li>
-                <li><a href="https://hackernoon.com/6-reasons-why-javascripts-async-await-blows-promises-away-tutorial-c7ec10518dd9">Async/Await</a></li>
             </ul>
+        </section>
+
+        <section>
+            <h2>Fetch Exercise</h2>
+            <ul>
+                <li>Make a new source folder for a website.</li>
+                <li>Allow the user to enter a song title and artist.</li>
+                <li>Call <a href="https://lyricsovh.docs.apiary.io/#reference/0/lyrics-of-a-song/search">this API.</a></li>
+                <li>Get the lyrics.</li>
+                <li>Display to your user!</li>
+            </ul>
+            <img src="images/exercise.gif" alt="Exercise Time">
         </section>
 
         <section>
@@ -639,6 +653,12 @@ success: function(data) {
         </section> -->
 
         <!-- End Slide -->
+
+        <section>
+            <h2>Great Resources</h2>
+            <p><a href="https://scotch.io/courses/10-need-to-know-javascript-concepts/callbacks-promises-and-async">Callbacks and Async - Oh My!</a></p>
+            <p><a href="https://developers.google.com/web/fundamentals/">Web Fundamentals</a></p>
+        </section>
 
         <section style="text-align: left;">
             <h1>THE END</h1>
