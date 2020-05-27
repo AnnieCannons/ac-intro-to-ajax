@@ -1,7 +1,5 @@
 //JavaScript Time!
 
-import { text } from "express";
-
 //Variables
 //A variable is a way to store values. To use a variable, we must declare it (to let the program know about the variable) and then assign it (to let the program know what value we are storing in the variable).
 //Here's how we would declare a variable named "xPos":
