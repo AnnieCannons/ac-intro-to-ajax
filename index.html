@@ -138,7 +138,6 @@
                 <li class="fragment">Keys must be stored with quotes (unlike JS Objects)</li>
                 <li class="fragment">Value can be the following data types: Number, String, Boolean, Array, Object, null</li>
                 <li class="fragment">Resembles objects in JS</li>
-                <li class="fragment">Validate @ <a href="http://jsonlint.com">JSONLint.com</a></li>
             </ul>
             <aside class="notes"></aside>
         </section> 
@@ -170,14 +169,37 @@
         <!-- Slide 9 -->        
         <section>
             <h2>
-                JSON Exercise Time!
+                How is data sent over the internet?
             </h2>
             <p>
-               Follow this <a href="http://www.teaching-materials.org/ajax/exercise_json.html" target="_blank">link</a>
+               GET and POST Requests
             </p>
-            <img src="images/exercise.gif" alt="Exercise Time">
-            <aside class="notes"></aside>
+            <img src="images/Rest-API.png" alt="Get and Post Requests">
         </section> 
+
+        <section>
+            <h2>Let's make a GET request for some JSON</h2>
+            <p class="fragment">Add the following URL into your URL bar in your browser.</p>
+            <p class="fragment">Your browser will automatically make a GET request, and this particular response will be JSON. This is very common for when you are making API calls to get data.</p>
+            <p class="fragment"><a href="https://cat-fact.herokuapp.com/facts">Click here</a></p>
+            <p class="fragment">Add JSON Formatter from the Chrome Web Store.</p>
+        </section>
+
+        <section>
+            <h2>When do we make Get and Post requests?</h2>
+            <ul>
+                <li class="fragment">When we go to a website (GET)</li>
+                <li class="fragment">When we login or sign up for a web app (POST)</li>
+                <li class="fragment">When we search for items in an online store (GET)</li>
+                <li class="fragment">When we submit a post to a social media site (POST)</li>
+                <li class="fragment">When we submit a form (POST)</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Web Apps</h2>
+            <p>Web apps can be set up to many, many GET and POST request for almost any user action. Frontend developers send those requests and receive the responses. They also determine WHEN a request is sent and how it is handled by the UI.</p>
+        </section>
         
         <!-- Slide 10 -->
         <section>
@@ -329,7 +351,7 @@
                 How does this communicating take place?
             </h2>
             <p class="fragment">There are different methods for making async requests, and new ones are being added all the time.</p>
-            <p class="fragment">We will talk about 2: AJAX and Fetch</p>
+            <p class="fragment">We will talk about a tool that is built into JavaScript, called Fetch</p>
             <img class="fragment" src="images/fetch.gif" alt="So Fetch">
             <aside class="notes"></aside>
         </section> 
@@ -337,13 +359,11 @@
         <!-- Slide 13 -->
         <section>
             <h2>
-                AJAX
+                (Previously) AJAX
             </h2>
             <p>AJAX = "Asynchronous JavaScript and XML."</p>
             <ul>
-                <li class="fragment">AJAX is a technique for creating fast and dynamic web pages.</li>
-                <li class="fragment">You can update parts of your web page, without reloading the whole page!</li>
-                <li class="fragment">Examples of applications using AJAX: Google Maps, Gmail, YouTube, and Facebook.</li>
+                <li class="fragment">This was a tool most commonly used with jQuery to make Asynchronous GET and POST requests. It is not really used much anymore as a technology.</li>
             </ul>
             <aside class="notes"></aside>
         </section> 
@@ -351,11 +371,11 @@
         <!-- Slide 14 -->
         <section>
             <h2>
-                AJAX
+                Fetch
             </h2>
             <ul>
-                <li class="fragment">Allows for asynchronous data transfer between a webpage and a web server.</li>
-                <li class="fragment">Javascript tells the browser to retrieve a particular URL and send the data back to the webpage.</li>
+                <li class="fragment">Allows for asynchronous data transfer between a webpage and a web server/API.</li>
+                <li class="fragment">JavaScript tells the browser to retrieve or send data from a particular URL and send the response back to the webpage.</li>
             </ul>
             <aside class="notes"></aside>
         </section> 
@@ -365,12 +385,12 @@
             <h2>
                 Let's talk about this diagram
             </h2>
-            <img src="images/ajax.png">
+            <img src="images/Screen Shot 2020-06-11 at 10.39.14 AM.png" alt="Diagram of Client and Backend Communication">
             <aside class="notes"></aside>
         </section> 
         
         <!-- Slide 24 -->
-        <section>
+        <!-- <section>
             <h2>
                 XMLHttpRequest
             </h2>
@@ -385,7 +405,6 @@
             <aside class="notes"></aside>
         </section> 
         
-        <!-- Slide 25 -->
         <section>
             <h2>
                 Anatomy of an XMLHttpRequest
@@ -408,7 +427,6 @@ request.send();
             <aside class="notes"></aside>
         </section> 
         
-        <!-- Slide 26 -->
         <section>
             <h2>
                 BUT! We don't need to write all that code...
@@ -416,7 +434,6 @@ request.send();
             <aside class="notes"></aside>
         </section> 
         
-        <!-- Slide 27 -->
         <section>
             <h2>
                 jQuery and AJAX
@@ -435,7 +452,6 @@ $.ajax({type: "GET",
             <aside class="notes"></aside>
         </section> 
         
-        <!-- Slide 28 -->
         <section>
             <h2>
                 Using jQuery for everything
@@ -460,7 +476,6 @@ $.ajax({type: "GET",
             <aside class="notes"></aside>
         </section> 
         
-        <!-- Slide 29 -->
         <section>
             <h2>
                 Remember!
@@ -471,7 +486,6 @@ $.ajax({type: "GET",
             <aside class="notes"></aside>
         </section> 
     
-        <!-- Slide 30 -->
         <section>
             <h2>
                 Debugging AJAX Requests
@@ -485,7 +499,7 @@ $.ajax({type: "GET",
             </ul>
             <aside class="notes"></aside>
         </section> 
-        
+         -->
         <!-- Slide 31 -->
         <section>
             <h2>Server Status Responses</h2>
@@ -495,28 +509,63 @@ $.ajax({type: "GET",
         <!-- Slide 32 -->
         <section>
             <h2>
-                AJAX + Servers
+                Fetch
             </h2>
             <p>
                Looking at "GET" and "POST"
             </p>
             <pre><code class="hljs" data-trim contenteditable>
-$.ajax({type: "GET",
-  url: "/api/books",
-  dataType: "json",
-  data: {'sortBy': 'author'},
-  success: processBooks
-});
+//GET
+fetch('http://example.com/movies.json')
+.then(response => response.json())
+.then(data => console.log(data));
 
-$.ajax({type: "POST",
-  url: "/api/book/new",
-  dataType: "json",
-  data: {'title': 'I, Robot', 'author': 'I. Asimov'}
-  success: processBoooks
-});
+//POST
+var data = { name: "lhack"}
+fetch('http://example.com/movies.json', {
+    method: 'POST', 
+    body: JSON.stringify(data) 
+})
+.then(response => response.json())
+.then(data => console.log(data));
             </code></pre>
             <aside class="notes"></aside>
         </section> 
+
+        <section>
+            <h2>understanding .then()</h2>
+<pre><code class="hljs" data-trim contenteditable>
+doSomething()
+.then(function(result) {
+return doSomethingElse(result);
+})
+.then(function(newResult) {
+return doThirdThing(newResult);
+})
+.then(function(finalResult) {
+console.log('Got the final result: ' + finalResult);
+})
+.catch(failureCallback);
+</code></pre>
+        </section>
+
+        <section>
+            <h2>understanding .then() with arrow functions</h2>
+<pre><code class="hljs" data-trim contenteditable>
+doSomething()
+.then(result => {
+return doSomethingElse(result);
+})
+.then(newResult => {
+return doThirdThing(newResult);
+})
+.then(finalResult => {
+console.log('Got the final result: ' + finalResult);
+})
+.catch(failureCallback);
+</code></pre>
+        </section>
+
         
         <!-- Slide 33 -->
         <!-- <section>
@@ -545,16 +594,8 @@ $.ajax({type: "POST",
         
         <!-- Slide 35 -->
         <section>
-            <h2>
-                Important AJAX Reminders
-            </h2>
-            <ul>
-                <li class="fragment">Cross domain requests have restrictions</li>
-                <li class="fragment"> Multiple AJAX requests don't return in order</li>
-                <li class="fragment">Hard to transfer files</li>
-                <li class="fragment">Browsers can over-cache/under-cache requests</li>
-                <li class="fragment">Can't transfer binary content</li>
-            </ul>
+            <h2>More Fetch Examples</h2>
+            <p>Let's walk through <a href="https://css-tricks.com/using-fetch/">this example</a></p>
             <aside class="notes"></aside>
         </section> 
         
@@ -563,66 +604,47 @@ $.ajax({type: "POST",
             <h2>
                 Exercise using an API
             </h2>
-            <p> We will check out this example using Meetup's API
-               <a href="http://codepen.io/btholt/pen/FArdh" target="_blank">Click here</a>
+            <p> We will check out this example using the Cat Facts API
+               <a href="https://codepen.io/LHack/pen/eYJZBPj" target="_blank">Click here</a>
             </p>
             <img src="images/exercise.gif" alt="Exercise Time">
             <aside class="notes"></aside>
         </section> 
         
 
-        <!-- Slide 37 -->
-        <section>
-            <h2>
-                What is happening?
-            </h2>
-            <p>
-               (Let's add the Chrome extension JSON formatter)
-            </p>
-            <aside class="notes"></aside>
-        </section> 
         
         <section>
             <h2>
                 Let's display the data!
             </h2>
             <pre><code class="hljs" data-trim contenteditable>
-$.ajax({
-type:"GET",
-url:"https://api.meetup.com/2/cities",
-success: function(data) {
-  $('.text').html('');
-  for (var i = 0; i < data.results.length; i++){
-  var place = data.results[i].city + "," + 
-  data.results[i].state;
-  $(".text").append("<p>" + place + "</p>"):
-}},
+$('.btn').click(function() {
 
+$('.text').text('loading . . .');
+
+fetch('https://cat-fact.herokuapp.com/facts')
+.then(response => response.json())
+.then(data => {
+    for (var i = 0; i < data.all.length; i++){ $(".text").append("<p>" + data.all[i].text + "</p>")
+}
+});
+});
             </code></pre>
-            <p>What happens?</p>
             <aside class="notes"></aside>
         </section> 
             
         <section>
             <h2>
-                Ajax exercise
+                Another Fetch GET exercise
             </h2>
             <p>
-               <a href="http://codepen.io/btholt/pen/Aejsl" target="_blank">Click here</a>
+               <a href="https://codepen.io/LHack/pen/KKVzWKj" target="_blank">Click here</a>
             </p>
             <img src="images/exercise.gif" alt="Exercise Time">
         </section> 
 
         <section>
-            <h2>What are other ways to be async in JS?</h2>
-            <ul>
-                <li><a href="https://css-tricks.com/using-fetch/">Fetch</a></li>
-                <li><a href="https://developers.google.com/web/fundamentals/primers/promises">Promises</a></li>
-            </ul>
-        </section>
-
-        <section>
-            <h2>Fetch Exercise</h2>
+            <h2>Fetch POST Exercise</h2>
             <ul>
                 <li>Make a new source folder for a website.</li>
                 <li>Allow the user to enter a song title and artist.</li>
@@ -637,6 +659,24 @@ success: function(data) {
             <h2>How JS Works!</h2>
             <p><a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ">The Event Loop</a></p>
         </section>
+
+        <section>
+            <h2>Great Resources</h2>
+            <p><a href="https://scotch.io/courses/10-need-to-know-javascript-concepts/callbacks-promises-and-async">Callbacks
+                    and Async - Oh My!</a></p>
+            <p><a href="https://developers.google.com/web/fundamentals/">Web Fundamentals</a></p>
+        </section>
+
+        <section>
+            <h2>What are other ways to be async in JS?</h2>
+            <p>Async/Await</p>
+            <ul>
+                <li><a href="https://javascript.info/async-await">Make our async JS work the way we want it to</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function">No longer need to chain promises together (.then())</a></li>
+            </ul>
+        </section>
+
+        
         <!-- Slide 36 -->
         <!-- <section>
             <h2>
@@ -654,11 +694,7 @@ success: function(data) {
 
         <!-- End Slide -->
 
-        <section>
-            <h2>Great Resources</h2>
-            <p><a href="https://scotch.io/courses/10-need-to-know-javascript-concepts/callbacks-promises-and-async">Callbacks and Async - Oh My!</a></p>
-            <p><a href="https://developers.google.com/web/fundamentals/">Web Fundamentals</a></p>
-        </section>
+       
 
         <section style="text-align: left;">
             <h1>THE END</h1>
