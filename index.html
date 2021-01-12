@@ -16,6 +16,7 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
+    <link rel="icon" type="image/png" href="images/AC_Asterisk.png">
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/league.css" id="theme">
 
@@ -49,6 +50,11 @@
         </section>
         <!--/Intro Slides-->
    
+        <section>
+            <h2>Async and JSON Review Study Guide</h2>
+            <p>Click <a href="https://docs.google.com/document/d/1V-CFUTMkB3Kd5B0V4gQPYAf1cRJDnvGejizT844Vq1s/edit?usp=sharing" target="_blank">here</a> to review.</p>
+        </section>
+
         <!-- Slide 1 -->
        
         <section>
@@ -59,9 +65,9 @@
                 <span style="color:yellow" >1. Static content and user interactions!</span>  
             </p>
             <ol>
-                <li class="fragment">Think a simple website</li>
-                <li class="fragment">Everyone accesses the basic content and functionality of a web page, using any browser or Internet connection</li>
-                <li class="fragment">The website can respond to user driven events. This can update the UI</li>
+                <li class="fragment">Think of a simple website.</li>
+                <li class="fragment">Everyone accesses the basic content and functionality of a web page, using any browser or Internet connection.</li>
+                <li class="fragment">The website can respond to user driven events. This can update the UI.</li>
             </ol>
         </section> 
 
@@ -75,7 +81,7 @@
                 <span style="color:yellow" >2. Dynamic Content and More Data</span>
             </p>
             <ol>
-                <li class="fragment">Think a complicated web applications</li>
+                <li class="fragment">Think of a complicated web application.</li>
                 <li class="fragment">Everyone can log in and create their own accounts. This will load specific data depending on the user interactions. The "shell" of the app is the same for all users, but the content is dynamic.</li>
                 <li class="fragment">What are some examples?</li>
             </ol>
@@ -86,9 +92,9 @@
             <h2>
                 1) Static Content
             </h2>
-            <img src="images/image2.png">
+            <img data-enlargable style="height: 300px; border: 5px solid blue; cursor: zoom-in;" src="images/image2.png">
             <br>
-            <p>A click from the user changes the UI, but the data is the same of all users.</a>
+            <p>A click from the user changes the UI, <br>but the data is the same of all users.</a>
         </section>
 
         <!-- Slide 4 -->
@@ -97,7 +103,7 @@
                 2) Dynamic Content
             </h2>
             <p>Adding Data (often user data)!</p>
-            <img src="images/dynamic_content.png">
+            <img data-enlargable style="height: 300px; border: 5px solid blue; cursor: zoom-in;" src="images/dynamic_content.png">
             <p>New unique data is added specifically for the user who is currently using the app.</a>
         </section> 
 
@@ -109,7 +115,7 @@
 
         <section>
             <h2>Remember!</h2>
-            <p><span style="color: yellow">Backend</span> languages handle the requests for data about users. <span style="color: lightpink">Databases</span>  hold all of the information about our users.</p>
+            <p><span style="color: yellow">Backend</span> languages handle the requests for data about users. <span style="color: lightpink">Databases</span> hold all of the information about our users.</p>
             <p>What happens if that language is different from JavaScript? And how do we make those requests?</p>
             <img src="images/thinking.gif" alt="Thinking Gif">
         </section>
@@ -119,7 +125,7 @@
             <h2>
                 Sending/Receiving Data Across the Internet
             </h2>
-            <p>JSON = JavaScript Object Notation </p>
+            <p><span style="color: yellow;">JSON</span> = <span style="color: yellow;">J</span>ava<span style="color: yellow;">S</span>cript <span style="color: yellow;">O</span>bject <span style="color: yellow;">N</span>otation</p>
             <ul>
                 <li class="fragment">JSON is all about transmitting data objects </li>
                 <li class="fragment">This is a way to store and send data!</li>
@@ -174,19 +180,26 @@
             <p>
                GET and POST Requests
             </p>
-            <img src="images/Rest-API.png" alt="Get and Post Requests">
+            <img data-enlargable style="height: 400px; border: 5px solid blue; cursor: zoom-in;" src="images/Rest-API.png" alt="Get and Post Requests">
         </section> 
 
         <section>
             <h2>Let's make a GET request for some JSON</h2>
             <p class="fragment">Add the following URL into your URL bar in your browser.</p>
             <p class="fragment">Your browser will automatically make a GET request, and this particular response will be JSON. This is very common for when you are making API calls to get data.</p>
-            <p class="fragment"><a href="https://cat-fact.herokuapp.com/facts">Click here</a></p>
-            <p class="fragment">Add JSON Formatter from the Chrome Web Store.</p>
+            <p class="fragment"><a href="https://cat-fact.herokuapp.com/facts" target="_blank">Click here</a> for an example.</p>
         </section>
 
         <section>
-            <h2>When do we make Get and Post requests?</h2>
+            <h2>Let's add a JSON Formatter</h2>
+            <p>The GET request on the prior slide yields JSON in raw form.</p>
+            <p>To make the JSON more readable, we will need to parse it.</p>
+            <p class="fragment"><a href="https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa" target="_blank">Click here</a> to add JSON Formatter,<br>an extension from the Chrome Web Store.</p>
+            <p class="fragment">Then click between Raw and Parsed. Notice what happens!</p>
+        </section>
+
+        <section>
+            <h2>When do we make GET and POST requests?</h2>
             <ul>
                 <li class="fragment">When we go to a website (GET)</li>
                 <li class="fragment">When we login or sign up for a web app (POST)</li>
@@ -198,7 +211,8 @@
 
         <section>
             <h2>Web Apps</h2>
-            <p>Web apps can be set up to many, many GET and POST request for almost any user action. Frontend developers send those requests and receive the responses. They also determine WHEN a request is sent and how it is handled by the UI.</p>
+            <p>Web apps can be set up to make many, many GET and POST requests for almost any user action.</p>
+            <p>Frontend developers send those requests and receive the responses. They also determine WHEN a request is sent and how it is handled by the UI.</p>
         </section>
         
         <!-- Slide 10 -->
@@ -207,7 +221,7 @@
                 What does asynchronous mean?
             </h2>
             <p>
-               Asynchronous technologies enable users to access information or communicate at different points of time, usually at the time of choice of the user.
+               <span style="color: yellow;">Asynchronous</span> technologies enable users to access information or communicate at different points of time, usually at the time of choice of the user.
             </p>
             <aside class="notes"></aside>
         </section> 
@@ -215,14 +229,14 @@
         <section>
             <h2>Asynchronous Analogy</h2>
             <p>A bank teller that only serves one person can only serve that one person at a time</p>
-            <p>VERSUS </p>
+            <p>VERSUS</p>
             <p>Multiple tellers who can see multiple people but all access the same back room.</p>
         </section>
 
         <!-- Slide 11 -->
         <section>
             <p>
-               The traditional data-driven web application is written so that it:
+               A traditional data-driven web application is written so that it:
             </p>
             <ol>
                 <li class="fragment">Displays a webpage</li>
@@ -230,6 +244,7 @@
                 <li class="fragment">Asks the server for data</li>
                 <li class="fragment">Reloads the webpage</li>
             </ol>
+            <p class="fragment">This process has a negative effect....</p>
             <aside class="notes"></aside>
         </section> 
         
@@ -239,9 +254,9 @@
                 Sad Users
             </h2>
             <p>
-               This has the effect that the user has "down time" - there is a period of time where they can't interact with the webpage at all
+               As a result, the user has "<span style="color: yellow;">down time</span>" - a period of time where the users can't interact with the webpage at all.
             </p>
-            <img src="images/smiley_sad-512.png">
+            <img data-enlargable style="height: 400px; border: 5px solid blue; cursor: zoom-in;" src="images/smiley_sad-512.png">
             <aside class="notes"></aside>
         </section> 
         
@@ -336,7 +351,7 @@
                 Requests and Responses
             </h2>
             <ul>
-                <li class="fragment"><strong>Front-End: </strong>Hey, Back-End! Here's my credentials. Can I get some data? How about books on AJAX?</li>
+                <li class="fragment"><strong>Front-End: </strong>Hey, Back-End! Here are my credentials. Can I get some data? How about books on AJAX?</li>
                 <li class="fragment"><strong>Back-End </strong><em>thinks about it, decides how to handle request...looks in database, searches...</em></li>
                 <li class="fragment"><strong>Back-End: </strong>200 OK, here are some books on AJAX!</li>
                 <li class="fragment"><strong>Front-End: </strong>Thanks! I'm going to make an online bookshelf with the data!</li>
@@ -351,7 +366,7 @@
                 How does this communicating take place?
             </h2>
             <p class="fragment">There are different methods for making async requests, and new ones are being added all the time.</p>
-            <p class="fragment">We will talk about a tool that is built into JavaScript, called Fetch</p>
+            <p class="fragment">We will talk about a tool that is built into JavaScript, called <span style="color: yellow;">Fetch</span>.</p>
             <img class="fragment" src="images/fetch.gif" alt="So Fetch">
             <aside class="notes"></aside>
         </section> 
@@ -361,9 +376,10 @@
             <h2>
                 (Previously) AJAX
             </h2>
-            <p>AJAX = "Asynchronous JavaScript and XML."</p>
+            <p><span style="color: yellow;">AJAX</span> = "<span style="color: yellow;">A</span>synchronous <span style="color: yellow;">J</span>avaScript <span style="color: yellow;">a</span>nd <span style="color: yellow;">X</span>ML."</p>
             <ul>
-                <li class="fragment">This was a tool most commonly used with jQuery to make Asynchronous GET and POST requests. It is not really used much anymore as a technology.</li>
+                <li class="fragment">AJAX was a tool most commonly used with jQuery to make Asynchronous GET and POST requests.</li>
+                <li class="fragment">AJAX is not really used much anymore as a technology.</li>
             </ul>
             <aside class="notes"></aside>
         </section> 
@@ -374,7 +390,7 @@
                 Fetch
             </h2>
             <ul>
-                <li class="fragment">Allows for asynchronous data transfer between a webpage and a web server/API.</li>
+                <li class="fragment"><span style="color: yellow;">Fetch</span> allows for asynchronous data transfer between a webpage and a web server/API.</li>
                 <li class="fragment">JavaScript tells the browser to retrieve or send data from a particular URL and send the response back to the webpage.</li>
             </ul>
             <aside class="notes"></aside>
@@ -385,7 +401,7 @@
             <h2>
                 Let's talk about this diagram
             </h2>
-            <img src="images/Screen Shot 2020-06-11 at 10.39.14 AM.png" alt="Diagram of Client and Backend Communication">
+            <img style="height: 550px;" src="images/Screen Shot 2020-06-11 at 10.39.14 AM.png" alt="Diagram of Client and Backend Communication">
             <aside class="notes"></aside>
         </section> 
         
@@ -511,58 +527,113 @@ $.ajax({type: "GET",
             <h2>
                 Fetch
             </h2>
+            <p>The <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch" target="_blank">Fetch API</a> allows JS to access and manipulate the HTTP pipeline, such as requests and responses, using <code style="color: aqua;">fetch()</code>.</p>
             <p>
-               Looking at "GET" and "POST"
+               Let's take a look at "<code style="color: aqua;">GET</code>" and "<code style="color: aqua;">POST</code>"
             </p>
             <pre><code class="hljs" data-trim contenteditable>
 //GET
 fetch('http://example.com/movies.json')
-.then(response => response.json())
-.then(data => console.log(data));
+  .then(response => response.json())
+  .then(data => console.log(data));
 
 //POST
 var data = { name: "lhack"}
 fetch('http://example.com/movies.json', {
-    method: 'POST', 
-    body: JSON.stringify(data) 
+  method: 'POST', 
+  body: JSON.stringify(data) 
 })
-.then(response => response.json())
-.then(data => console.log(data));
+  .then(response => response.json())
+  .then(data => console.log(data));
             </code></pre>
             <aside class="notes"></aside>
         </section> 
 
         <section>
+            <h2>Fetch for GET and POST Requests</h2>
+<pre><code class="hljs" data-trim contenteditable>
+//GET
+fetch('http://example.com/movies.json')
+
+//POST
+var data = { name: "lhack"}
+fetch('http://example.com/movies.json', {
+  method: 'POST', 
+  body: JSON.stringify(data) 
+})
+</code></pre>
+            <p class="fragment">Notice that both requests have a <span style="color: aqua;">url string</span> as a parameter.</p>
+            <p class="fragment">The <span style="color: aqua;">POST</span> request has an additional parameter: an <span style="color: aqua;">object</span>.<br>
+            <span class="fragment">The object in the <span style="color: aqua;">POST</span> request has 2 properties:</span></p>
+            <ul>
+                <li class="fragment"><code style="color: aqua;">method</code>, which must have a value of <span style="color: aqua;">'POST'</span></li>
+                <li class="fragment"><code style="color: aqua;">body</code>, which must utilize the <span style="color: aqua;">JSON.stringify()</span> method.
+                <ul>
+                    <li class="fragment">The <span style="color: aqua;">data</span> to be posted must be passed into <span style="color: aqua;">JSON.stringify()</span> to become a JSON string.</li>
+                </ul></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>
+                Fetch first, then what?
+            </h2>
+            <p>When using <code style="color: aqua;">fetch()</code>, expect a <code style="color: aqua;">response</code> and <code style="color: aqua;">data</code>.
+            <br>
+                <span class="fragment">Let's look at "<code style="color: aqua;">GET</code>" and "<code style="color: aqua;">POST</code>" again.</span>
+             </p>
+            <pre class="fragment"><code class="hljs" data-trim contenteditable>
+//GET
+fetch('http://example.com/movies.json')
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+//POST
+var data = { name: "lhack"}
+fetch('http://example.com/movies.json', {
+  method: 'POST', 
+  body: JSON.stringify(data) 
+})
+  .then(response => response.json())
+  .then(data => console.log(data));
+            </code></pre>
+            <p class="fragment">Notice we can use method chaining and apply <code style="color: aqua;">.then()</code> right after we use the <code style="color: aqua;">fetch()</code> method.</p>
+            <aside class="notes"></aside>
+        </section>
+
+        <section>
             <h2>understanding .then()</h2>
 <pre><code class="hljs" data-trim contenteditable>
 doSomething()
-.then(function(result) {
-return doSomethingElse(result);
-})
-.then(function(newResult) {
-return doThirdThing(newResult);
-})
-.then(function(finalResult) {
-console.log('Got the final result: ' + finalResult);
-})
-.catch(failureCallback);
+  .then(function(result) {
+    return doSomethingElse(result);
+  })
+  .then(function(newResult) {
+    return doThirdThing(newResult);
+  })
+  .then(function(finalResult) {
+    console.log('Got the final result: ' + finalResult);
+  })
+  .catch(failureCallback);
 </code></pre>
+            <p class="fragment">After a <code style="color: aqua;">fetch()</code>, an app can have as many <code style="color: aqua;">.then()</code> methods as applicable.</p>
+            <p class="fragment">A <code style="color: aqua;">.catch()</code> method is used to catch errors.</p>
         </section>
 
         <section>
             <h2>understanding .then() with arrow functions</h2>
 <pre><code class="hljs" data-trim contenteditable>
 doSomething()
-.then(result => {
-return doSomethingElse(result);
-})
-.then(newResult => {
-return doThirdThing(newResult);
-})
-.then(finalResult => {
-console.log('Got the final result: ' + finalResult);
-})
-.catch(failureCallback);
+  .then(result => {
+    return doSomethingElse(result);
+  })
+  .then(newResult => {
+    return doThirdThing(newResult);
+  })
+  .then(finalResult => {
+    console.log('Got the final result: ' + finalResult);
+  })
+  .catch(failureCallback);
 </code></pre>
         </section>
 
@@ -595,7 +666,7 @@ console.log('Got the final result: ' + finalResult);
         <!-- Slide 35 -->
         <section>
             <h2>More Fetch Examples</h2>
-            <p>Let's walk through <a href="https://css-tricks.com/using-fetch/">this example</a></p>
+            <p>Let's walk through <a href="https://css-tricks.com/using-fetch/" target="_blank">this example</a></p>
             <aside class="notes"></aside>
         </section> 
         
@@ -604,9 +675,10 @@ console.log('Got the final result: ' + finalResult);
             <h2>
                 Exercise using an API
             </h2>
-            <p> We will check out this example using the Cat Facts API
+            <p> We will check out this example using the Cat Facts API<br>
                <a href="https://codepen.io/LHack/pen/eYJZBPj" target="_blank">Click here</a>
             </p>
+            <a href="https://docs.google.com/spreadsheets/d/1dHybQNvrC0g8qR0Aolo75Cg68-Lc9ecrDJIfwZdYrbc/edit?usp=sharing" target="_blank"><img width="300" src="images/google-sheets.png" alt="Sheets logo"></a>
             <img src="images/exercise.gif" alt="Exercise Time">
             <aside class="notes"></aside>
         </section> 
@@ -623,11 +695,12 @@ $('.btn').click(function() {
 $('.text').text('loading . . .');
 
 fetch('https://cat-fact.herokuapp.com/facts')
-.then(response => response.json())
-.then(data => {
-    for (var i = 0; i < data.all.length; i++){ $(".text").append("<p>" + data.all[i].text + "</p>")
-}
-});
+  .then(response => response.json())
+  .then(data => {
+    for (var i = 0; i < data.all.length; i++) { 
+      $(".text").append("<p>" + data.all[i].text + "</p>")
+    }
+  });
 });
             </code></pre>
             <aside class="notes"></aside>
@@ -640,6 +713,7 @@ fetch('https://cat-fact.herokuapp.com/facts')
             <p>
                <a href="https://codepen.io/LHack/pen/KKVzWKj" target="_blank">Click here</a>
             </p>
+            <a href="https://docs.google.com/spreadsheets/d/1dHybQNvrC0g8qR0Aolo75Cg68-Lc9ecrDJIfwZdYrbc/edit?usp=sharing" target="_blank"><img width="300" src="images/google-sheets.png" alt="Sheets logo"></a>
             <img src="images/exercise.gif" alt="Exercise Time">
         </section> 
 
@@ -648,31 +722,32 @@ fetch('https://cat-fact.herokuapp.com/facts')
             <ul>
                 <li>Make a new source folder for a website.</li>
                 <li>Allow the user to enter a song title and artist.</li>
-                <li>Call <a href="https://lyricsovh.docs.apiary.io/#reference/0/lyrics-of-a-song/search">this API.</a></li>
+                <li>Call <a href="https://lyricsovh.docs.apiary.io/#reference/0/lyrics-of-a-song/search" target="_blank">this API.</a></li>
                 <li>Get the lyrics.</li>
                 <li>Display to your user!</li>
             </ul>
+            <a href="https://docs.google.com/spreadsheets/d/1dHybQNvrC0g8qR0Aolo75Cg68-Lc9ecrDJIfwZdYrbc/edit?usp=sharing" target="_blank"><img width="300" src="images/google-sheets.png" alt="Sheets logo"></a>
             <img src="images/exercise.gif" alt="Exercise Time">
         </section>
 
         <section>
             <h2>How JS Works!</h2>
-            <p><a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ">The Event Loop</a></p>
+            <p><a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ" target="_blank">The Event Loop</a></p>
         </section>
 
         <section>
             <h2>Great Resources</h2>
-            <p><a href="https://scotch.io/courses/10-need-to-know-javascript-concepts/callbacks-promises-and-async">Callbacks
+            <p><a href="https://scotch.io/courses/10-need-to-know-javascript-concepts/callbacks-promises-and-async" target="_blank">Callbacks
                     and Async - Oh My!</a></p>
-            <p><a href="https://developers.google.com/web/fundamentals/">Web Fundamentals</a></p>
+            <p><a href="https://developers.google.com/web/fundamentals/" target="_blank">Web Fundamentals</a></p>
         </section>
 
         <section>
             <h2>What are other ways to be async in JS?</h2>
             <p>Async/Await</p>
             <ul>
-                <li><a href="https://javascript.info/async-await">Make our async JS work the way we want it to</a></li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function">No longer need to chain promises together (.then())</a></li>
+                <li><a href="https://javascript.info/async-await" target="_blank">Make our async JS work the way we want it to</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function" target="_blank">No longer need to chain promises together (.then())</a></li>
             </ul>
         </section>
 
@@ -694,7 +769,10 @@ fetch('https://cat-fact.herokuapp.com/facts')
 
         <!-- End Slide -->
 
-       
+        <section>
+            <h2>Async and JSON Roundup</h2>
+            <p>Click <a href="https://docs.google.com/document/d/1V-CFUTMkB3Kd5B0V4gQPYAf1cRJDnvGejizT844Vq1s/edit?usp=sharing" target="_blank">here</a> to review.</p>
+        </section>
 
         <section style="text-align: left;">
             <h1>THE END</h1>
@@ -705,6 +783,8 @@ fetch('https://cat-fact.herokuapp.com/facts')
 
 </div>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="js/zoomin.js"></script>
 <script src="lib/js/head.min.js"></script>
 <script src="js/reveal.js"></script>
 
