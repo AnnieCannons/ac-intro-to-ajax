@@ -155,3 +155,14 @@ var myUsers = [
     userFaves: ["rainbows", "fancy cocktails", "pina coladas", "umbrellas"],
   },
 ];
+
+//Given the following object, loop through the properties and print the property name as well as the property's value.
+var newUser = {
+  userId: 9,
+  userName: {
+    firstName: "Cloud",
+    lastName: "Nine",
+  },
+  userCity: "Castlemania",
+  userFaves: ["stardust", "pot of gold", "sun sprinkles", "moon ray"],
+}
