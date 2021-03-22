@@ -28,6 +28,7 @@ var myNumber = 47.47;
 //3. Log to the console myNumber rounded to the nearest whole number.
 
 //Booleans are true or false. That's it!
+//4. Declare a variable that has a boolean value.
 
 //Arrays are used to store lists of items. Arrays can store any of the 5 data types.
 
@@ -38,8 +39,8 @@ var myRecentBooks = [
   "Who's Afraid of Virginia Woolf",
 ];
 
-//4. Add a new book onto the end of the myRecentBooks array.
-//5. Log "Where the Crawdads Sign" to the console.
+//5. Add a new book onto the end of the myRecentBooks array.
+//6. Log "Where the Crawdads Sign" to the console.
 
 //Objects are used to store key/value pairs about an individual item. Objects use dot notation to access values in an object.
 
@@ -52,7 +53,7 @@ var myBook = {
 var coolAuthor = myBook.author;
 console.log(coolAuthor); // This would display Mary Shelley
 
-//6. Given the following collection, how would you log "trees" to the console?
+//7. Given the following collection, how would you log "trees" to the console?
 var myUsers = [
   {
     userId: 1,
@@ -92,9 +93,9 @@ function createCircle(radius) {
 }
 
 var myCircle = createCircle(10);
-//7. What is the value of myCircle after all of this code has been executed?
+//8. What is the value of myCircle after all of this code has been executed?
 
-//8. Create a function that takes in 2 parameters, a first name and a last name, and outputs a greeting to that person. Execute the function 3 times with different arguments.
+//9. Create a function that takes in 2 parameters, a first name and a last name, and outputs a greeting to that person. Execute the function 3 times with different arguments.
 
 //Conditional Statements
 //A conditional statement is a way for your program to test if a given statement is true or false.
@@ -106,9 +107,9 @@ if (age > 21) {
   console.log("Denied");
 }
 
-//9. What is the above code going to log to the console?
+//10. What is the above code going to log to the console?
 
-// 10. Create an if statement that tests to see if a user is over 21 years old and has the value isCoder set to true.
+//11. Create an if statement that tests to see if a user is over 21 years old and has the value isCoder set to true.
 
 //JavaScript uses equivalancey operators to see if certain data is related.
 
@@ -120,12 +121,12 @@ if (age > 21) {
 10 === 10 && 9 < 10; //
 10 > 9 || 9 === 10; //
 
-//10. Indicate if each of those statements above are true or false.
+//12. Indicate if each of those statements above are true or false.
 
 //Loops
 //Loops are used to iterate through a list of items in an array or through keys in an objects. Loops are created by instatiating a counter variable (i) and then setting a condition that must be true to start the loop and then must be false to end the loop.
 
-//Given the following collection, create a for loop that adds all of the userFaves to an array.
+//13. Given the following collection, create a for loop that adds all of the userFaves to an array.
 var myUsers = [
   {
     userId: 1,
@@ -155,3 +156,14 @@ var myUsers = [
     userFaves: ["rainbows", "fancy cocktails", "pina coladas", "umbrellas"],
   },
 ];
+
+//14. Given the following object, loop through the properties and log the property name as well as the property's value to the console.
+var newUser = {
+  userId: 9,
+  userName: {
+    firstName: "Cloud",
+    lastName: "Nine",
+  },
+  userCity: "Castlemania",
+  userFaves: ["stardust", "pot of gold", "sun sprinkles", "moon ray"],
+}
