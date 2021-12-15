@@ -22,6 +22,7 @@
 
     <!-- Code syntax highlighting -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="css/classcolors.css">
 
     <!-- Printing and PDF exports -->
     <script>
@@ -49,17 +50,26 @@
             <h2>Introduction to Async and JSON</h2>
         </section>
         <!--/Intro Slides-->
-   
         <section>
+            <h2>Async and JSON Overview</h2>
+            <ul>
+                <li>Review HTML and JS's Relationship</li>
+                <li>JSON</li>
+                <li>Async</li>
+                <li>Async/Await</li>
+            </ul>
+        </section>
+
+        <!-- <section>
             <h2>Async and JSON Review Study Guide</h2>
             <p>Click <a href="https://docs.google.com/document/d/1V-CFUTMkB3Kd5B0V4gQPYAf1cRJDnvGejizT844Vq1s/edit?usp=sharing" target="_blank">here</a> to review.</p>
-        </section>
+        </section> -->
 
         <section>
             <h2>Async/Await Videos</h2>
-            <p>For this unit, we will be watching these <a href="https://docs.google.com/document/d/1uzAOfnqKt_tnuI7kWHu5Sc_jMtlzuP1EeMmN0enhSuY/edit?usp=sharing" target="_blank">Asynchronous JavaScript videos</a>.</p>
-            <a href="https://docs.google.com/spreadsheets/d/1dHybQNvrC0g8qR0Aolo75Cg68-Lc9ecrDJIfwZdYrbc/edit?usp=sharing" target="_blank"><img width="300" src="images/google-sheets.png" alt="Sheets logo"></a>
-            <img src="images/exercise.gif" alt="Exercise Time">
+            <p>For this unit, we will be watching these <a href="https://docs.google.com/document/d/1uzAOfnqKt_tnuI7kWHu5Sc_jMtlzuP1EeMmN0enhSuY/edit#heading=h.o8hu4wbfomqd" target="_blank">Asynchronous JavaScript videos</a>.</p>
+            <!-- <a href="https://trello.com/b/RQrD5Ye2" target="_blank"><img width="300" src="images/trello-logo-blue.png" alt="Trello logo"></a> -->
+            <!-- <img src="images/exercise.gif" alt="Exercise Time"> -->
         </section>
 
         <section>
@@ -127,6 +137,16 @@
         </section>
 
         <section>
+            <h2>Async and JSON Overview</h2>
+            <ul>
+                <li class="green">Review HTML and JS's Relationship</li>
+                <li>JSON</li>
+                <li>Async</li>
+                <li>Async/Await</li>
+            </ul>
+        </section>
+
+        <section>
             <h2>Remember!</h2>
             <p><span style="color: yellow">Backend</span> languages handle the requests for data about users. <span style="color: lightpink">Databases</span> hold all of the information about our users.</p>
             <p>What happens if that language is different from JavaScript? And how do we make those requests?</p>
@@ -163,12 +183,10 @@
 
         <!-- Slide 7 -->  
         <section>
-            <h2>
-                  Example
-            </h2>
+            <h2>Example</h2>
             <pre><code class="hljs" data-trim contenteditable>
 {
- "firstName": "Jane", 
+ "firstName": "Gene", 
  "lastName": "Smith", 
  "address": { 
    "streetAddress": "425 2nd Street", 
@@ -184,7 +202,14 @@
             <aside class="notes"></aside>
           </section> 
                 
-        
+        <section>
+            <h2>JSON Exercise</h2>
+            <p>Your product manager provided you the following UI design. Use JSON to store the data.</p>
+            <img src="images/json-exercise.jpg" alt="JSON Exercise">
+            <a href="https://trello.com/b/RQrD5Ye2" target="_blank"><img width="300" src="images/trello-logo-blue.png" alt="Trello logo"></a>
+            <img width=280 src="images/exercise.gif" alt="Exercise Time">
+        </section>
+
         <!-- Slide 9 -->        
         <section>
             <h2>
@@ -194,6 +219,7 @@
                GET and POST Requests
             </p>
             <img data-enlargable style="height: 400px; border: 5px solid blue; cursor: zoom-in;" src="images/Rest-API.png" alt="Get and Post Requests">
+            <aside class="notes">Remind folks about GET and POST requests.</aside>
         </section> 
 
         <section>
@@ -201,6 +227,7 @@
             <p class="fragment">Add the following URL into your URL bar in your browser.</p>
             <p class="fragment">Your browser will automatically make a GET request, and this particular response will be JSON. This is very common for when you are making API calls to get data.</p>
             <p class="fragment"><a href="https://cat-fact.herokuapp.com/facts" target="_blank">Click here</a> for an example.</p>
+            <aside class="notes">URL is displaying data structure from an API call to the browser.</aside>
         </section>
 
         <section>
@@ -225,9 +252,20 @@
         <section>
             <h2>Web Apps</h2>
             <p>Web apps can be set up to make many, many GET and POST requests for almost any user action.</p>
-            <p>Frontend developers send those requests and receive the responses. They also determine WHEN a request is sent and how it is handled by the UI.</p>
+            <p>Frontend developers send those requests and receive the responses.</p>
+            <p>Frontend developers also determine WHEN a request is sent and how it is handled by the UI.</p>
         </section>
         
+        <section>
+            <h2>Async and JSON Overview</h2>
+            <ul>
+                <li class="green">Review HTML and JS's Relationship</li>
+                <li class="green">JSON</li>
+                <li>Async</li>
+                <li>Async/Await</li>
+            </ul>
+        </section>
+
         <!-- Slide 10 -->
         <section>
             <h2>
@@ -239,15 +277,16 @@
             <aside class="notes"></aside>
         </section> 
 
-        <section>
+        <!-- <section>
             <h2>Asynchronous Analogy</h2>
             <p>A bank teller that only serves one person can only serve that one person at a time</p>
             <p>VERSUS</p>
             <p>Multiple tellers who can see multiple people but all access the same back room.</p>
-        </section>
+        </section> -->
 
         <!-- Slide 11 -->
         <section>
+            <h2>Web Apps - The Old Way</h2>
             <p>
                A traditional data-driven web application is written so that it:
             </p>
@@ -280,7 +319,7 @@
             </h2>
             <a href="https://www.airbnb.com/wishlists/popular" target="_blank"><img src="images/airbnb.png"></a>
             <p>As you load more listings on Airbnb, you are sending requests for more data.</p>
-            <aside class="notes"></aside>
+            <aside class="notes">As you scroll down Airbnb, you are requesting more data per scroll without having to refresh the page every time you scroll.</aside>
         </section> 
         
         <!-- Slide 17 -->
@@ -288,18 +327,19 @@
             <h2>
                 Web 1.0 and User Interaction
             </h2>
-            <img src="images/web_user_int1.png">
+            <!-- inserted this image instead: https://static.javatpoint.com/images/ajax/synchronous.gif -->
+            <img data-enlargable style="height: 300px; border: 5px solid blue; cursor: zoom-in;" src="images/synchronous.jpg">
             <aside class="notes"></aside>
         </section> 
                
         <!-- Slide 18 --> 
-        <section>
+        <!-- <section>
             <h2>
                 Web 2.0 and User Interaction
             </h2>
             <img src="images/web_user_int2.png">
-            <aside class="notes"></aside>
-        </section>
+            <aside class="notes">Takeaway: compared to previous slide, a processor in the middle handles API calls to spare down time and also request more database calls.</aside>
+        </section> -->
 
         <!-- Slide 19 -->
         <section>
@@ -307,6 +347,7 @@
                 Importance of Async for Web 2.0 Programming
             </h2>
             <ul>
+                <li class="fragment">No down time!</li>
                 <li class="fragment">The user can still interact with other parts of the page while one part is loading.</li>
                 <li class="fragment"> The user can selectively load the content they're interested in.</li>
                 <li class="fragment">This is arguably the most important part of Web 2.0 programming!</li>
@@ -320,10 +361,10 @@
                 Web 1.0 vs. Web 2.0
             </h2>
             <table>
-            <tr>
+            <!-- <tr>
               <td><img src="images/web_user_int1.png" width="75%"></td>
               <td><img src="images/web_user_int2.png" width="75%"></td>
-            </tr>
+            </tr> -->
             <tr>
               <td>Technologies Used:</td>
               <td>Technologies Used:</td>
@@ -354,8 +395,8 @@
             <h2>
                 Requests and Responses
             </h2>
-            <img src="images/2.jpg">
-            <aside class="notes"></aside>
+            <img data-enlargable style="height: 300px; border: 5px solid blue; cursor: zoom-in;" src="images/2.jpg">
+            <aside class="notes">Takeaway: Every Request has a Response.</aside>
         </section> 
         
         <!-- Slide 22 -->
@@ -364,9 +405,9 @@
                 Requests and Responses
             </h2>
             <ul>
-                <li class="fragment"><strong>Front-End: </strong>Hey, Back-End! Here are my credentials. Can I get some data? How about books on AJAX?</li>
+                <li class="fragment"><strong>Front-End: </strong>Hey, Back-End! Here are my credentials. Can I get some data? How about books on APIs?</li>
                 <li class="fragment"><strong>Back-End </strong><em>thinks about it, decides how to handle request...looks in database, searches...</em></li>
-                <li class="fragment"><strong>Back-End: </strong>200 OK, here are some books on AJAX!</li>
+                <li class="fragment"><strong>Back-End: </strong>200 OK, here are some books on APIs!</li>
                 <li class="fragment"><strong>Front-End: </strong>Thanks! I'm going to make an online bookshelf with the data!</li>
             </ul>
             <aside class="notes"></aside>
@@ -376,7 +417,7 @@
         <!-- Slide 23 -->
         <section>
             <h2>
-                How does this communicating take place?
+                How does this communication take place?
             </h2>
             <p class="fragment">There are different methods for making async requests, and new ones are being added all the time.</p>
             <p class="fragment">We will talk about a tool that is built into JavaScript, called <span style="color: yellow;">Fetch</span>.</p>
@@ -385,7 +426,7 @@
         </section> 
 
         <!-- Slide 13 -->
-        <section>
+        <!-- <section>
             <h2>
                 (Previously) AJAX
             </h2>
@@ -396,7 +437,7 @@
             </ul>
             <aside class="notes"></aside>
         </section> 
-        
+         -->
         <!-- Slide 14 -->
         <section>
             <h2>
@@ -581,9 +622,10 @@ fetch('http://example.com/movies.json', {
             <ul>
                 <li class="fragment"><code style="color: aqua;">method</code>, which must have a value of <span style="color: aqua;">'POST'</span></li>
                 <li class="fragment"><code style="color: aqua;">body</code>, which must utilize the <span style="color: aqua;">JSON.stringify()</span> method.
-                <ul>
+                <!-- <ul>
                     <li class="fragment">The <span style="color: aqua;">data</span> to be posted must be passed into <span style="color: aqua;">JSON.stringify()</span> to become a JSON string.</li>
-                </ul></li>
+                </ul> -->
+            </li>
             </ul>
         </section>
 
@@ -614,7 +656,7 @@ fetch('http://example.com/movies.json', {
             <aside class="notes"></aside>
         </section>
 
-        <section>
+        <!-- <section>
             <h2>understanding .then()</h2>
 <pre><code class="hljs" data-trim contenteditable>
 doSomething()
@@ -648,7 +690,7 @@ doSomething()
   })
   .catch(failureCallback);
 </code></pre>
-        </section>
+        </section> -->
 
         
         <!-- Slide 33 -->
@@ -680,7 +722,7 @@ doSomething()
         <section>
             <h2>More Fetch Examples</h2>
             <p>Let's walk through <a href="https://css-tricks.com/using-fetch/" target="_blank">this example</a></p>
-            <aside class="notes"></aside>
+            <aside class="notes">a fetch() can have as many .then()s as applicable, followed by a .catch() - first .then() is convert json; second .then() is to format the data. </aside>
         </section> 
         
         <!-- Slide 36 -->
@@ -691,7 +733,7 @@ doSomething()
             <p> We will check out this example using the Cat Facts API<br>
                <a href="https://codepen.io/LHack/pen/eYJZBPj" target="_blank">Click here</a>
             </p>
-            <a href="https://docs.google.com/spreadsheets/d/1dHybQNvrC0g8qR0Aolo75Cg68-Lc9ecrDJIfwZdYrbc/edit?usp=sharing" target="_blank"><img width="300" src="images/google-sheets.png" alt="Sheets logo"></a>
+            <a href="https://trello.com/b/RQrD5Ye2" target="_blank"><img width="300" src="images/trello-logo-blue.png" alt="Trello logo"></a>
             <img src="images/exercise.gif" alt="Exercise Time">
             <aside class="notes"></aside>
         </section> 
@@ -701,14 +743,14 @@ doSomething()
                 Let's display the data!
             </h2>
             <pre><code class="hljs" data-trim contenteditable>
-$('.btn').click(function() {
+$('.btn').on("click",function() {
 
 $('.text').text('loading . . .');
 
 fetch('https://cat-fact.herokuapp.com/facts')
   .then(response => response.json())
   .then(data => {
-    for (var i = 0; i < data.all.length; i++) { 
+    for (let i = 0; i < data.all.length; i++) { 
       $(".text").append("<p>" + data.all[i].text + "</p>")
     }
   });
@@ -725,12 +767,12 @@ fetch('https://cat-fact.herokuapp.com/facts')
             <p>
                <a href="https://codepen.io/LHack/pen/KKVzWKj" target="_blank">Click here</a>
             </p>
-            <a href="https://docs.google.com/spreadsheets/d/1dHybQNvrC0g8qR0Aolo75Cg68-Lc9ecrDJIfwZdYrbc/edit?usp=sharing" target="_blank"><img width="300" src="images/google-sheets.png" alt="Sheets logo"></a>
+            <a href="https://trello.com/b/RQrD5Ye2" target="_blank"><img width="300" src="images/trello-logo-blue.png" alt="Trello logo"></a>
             <img src="images/exercise.gif" alt="Exercise Time">
         </section> 
 
         <section>
-            <h2>Fetch POST Exercise</h2>
+            <h2>Fetch GET Exercise</h2>
             <ul>
                 <li>Make a new source folder for a website.</li>
                 <li>Allow the user to enter a song title and artist.</li>
@@ -738,13 +780,14 @@ fetch('https://cat-fact.herokuapp.com/facts')
                 <li>Get the lyrics.</li>
                 <li>Display to your user!</li>
             </ul>
-            <a href="https://docs.google.com/spreadsheets/d/1dHybQNvrC0g8qR0Aolo75Cg68-Lc9ecrDJIfwZdYrbc/edit?usp=sharing" target="_blank"><img width="300" src="images/google-sheets.png" alt="Sheets logo"></a>
+            <a href="https://trello.com/b/RQrD5Ye2" target="_blank"><img width="300" src="images/trello-logo-blue.png" alt="Trello logo"></a>
             <img src="images/exercise.gif" alt="Exercise Time">
         </section>
 
         <section>
             <h2>How JS Works!</h2>
             <p><a href="https://www.youtube.com/watch?v=8aGhZQkoFbQ" target="_blank">The Event Loop</a></p>
+            <aside class="notes">This video can have a lot of tech language. After watching the video, we'll recap on the takeaways.</aside>
         </section>
 
         <section>
@@ -758,23 +801,63 @@ fetch('https://cat-fact.herokuapp.com/facts')
             <h2>Song Lyrics Project Deployment</h2>
             <ul>
                 <li>Revisit the Song Lyrics project.</li>
-                <li>Use HTML and CSS to make the page look inviting.</li>
+                <!-- <li>Use HTML and CSS to make the page look inviting.</li> -->
                 <li>Make sure that your project still successfully calls <a href="https://lyricsovh.docs.apiary.io/#reference/0/lyrics-of-a-song/search" target="_blank">this API.</a></li>
                 <li>Ensure that the lyrics display nicely to the user.</li>
-                <li>You can also research how to add a favicon and add it.</li>
+                <!-- <li>You can also research how to add a favicon and add it.</li> -->
                 <li>When satisfied, then visit this <a href="https://docs.google.com/document/d/1c1eewww9SVPGn8Ax46tKM0iQFUO7A4TC63MYxCGFy5k/edit?usp=sharing" target="blank">link</a> to create a repo, push an initial commit, and deploy the site!</li>
             </ul>
-            <!-- <a href="https://docs.google.com/spreadsheets/d/1dHybQNvrC0g8qR0Aolo75Cg68-Lc9ecrDJIfwZdYrbc/edit?usp=sharing" target="_blank"><img width="300" src="images/google-sheets.png" alt="Sheets logo"></a>
+            <!-- <a href="https://trello.com/b/RQrD5Ye2" target="_blank"><img width="300" src="images/trello-logo-blue.png" alt="Trello logo"></a>
             <img src="images/exercise.gif" alt="Exercise Time"> -->
         </section>
 
         <section>
-            <h2>What are other ways to be async in JS?</h2>
-            <p>Async/Await</p>
+            <h2>Async and JSON Overview</h2>
             <ul>
+                <li class="green">Review HTML and JS's Relationship</li>
+                <li class="green">JSON</li>
+                <li class="green">Async</li>
+                <li>Async/Await</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Another Way to Be Async in JS</h2>
+            <p>Instead of .then()</p>
+<pre><code class="hljs" data-trim contenteditable>
+function getLyrics() {
+  fetch('https://api.lyrics.ovh/v1/coldplay/42')
+    .then(response => response.json())
+    .then(data => console.log(data));
+  });
+}
+</code></pre>
+            <p>Async/Await</p>
+<pre class="fragment"><code class="hljs" data-trim contenteditable>//async/await refactor
+async function getLyrics() {
+  let response = await fetch('https://api.lyrics.ovh/v1/coldplay/42');
+  let lyrics = await response.json();
+  console.log(lyrics);
+}
+</code></pre>
+            <!-- <ul>
                 <li><a href="https://javascript.info/async-await" target="_blank">Make our async JS work the way we want it to</a></li>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function" target="_blank">No longer need to chain promises together (.then())</a></li>
+            </ul> -->
+        </section>
+
+        <section>
+            <h2>Why Use Async/Await?</h2>
+            <ul>
+                <li>Makes your code easier to read, because it avoids method chaining with <code class="aqua">.then()</code>.</li>
+                <li>Allows you to handle data in a <span class="yellow">sequential</span> way.
+                    <ul>
+                        <li>Example: You can call one database to get a user's movie preferences <i>first</i>  before calling a database to get the movie's posters.</li>
+                    </ul></li>
+                <li><code class="aqua">await</code> allows you to write these data calls in order.</li>
             </ul>
+            <p>Learn how to implement async/await. Read <a href="https://css-tricks.com/understanding-async-await/" target="_blank">here</a>.</p>
+            <aside class="notes">For article, read only up to first code block.</aside>
         </section>
 
         <section>
@@ -782,7 +865,7 @@ fetch('https://cat-fact.herokuapp.com/facts')
             <p>We have used <code style="color: aqua">fetch()</code> to get data using the Cat Facts API.</p>
             <p><a href="https://codepen.io/codexmon/pen/BaLqrJP?editors=0011" target="_blank">Click here</a> to refactor using <code style="color: aqua">async</code>/<code style="color: aqua">await</code>.
             </p>
-            <p>Feel free to reference the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function" target="_blank">MDN documentation</a></p>
+            <!-- <p>Feel free to reference the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/async_function" target="_blank">MDN documentation</a></p> -->
             <aside class="notes"></aside>
             <img src="https://media.giphy.com/media/VbnUQpnihPSIgIXuZv/giphy.gif" alt="Cat with black rimmed glasses typing at a computer">
         </section> 
@@ -792,16 +875,16 @@ fetch('https://cat-fact.herokuapp.com/facts')
             <p>Ask a user for a number, then make an API call to fetch and then display a trivia fact about that number to the user.</p>
             <p><a href="https://github.com/AnnieCannons/ac-intro-to-ajax/tree/master/images/numbers-api.zip" target="_blank">Click here</a> for the instructions and links to resources to help you use <code style="color: aqua">async</code>/<code style="color: aqua">await</code>.
             <br>
-            <a href="https://docs.google.com/spreadsheets/d/1dHybQNvrC0g8qR0Aolo75Cg68-Lc9ecrDJIfwZdYrbc/edit?usp=sharing" target="_blank"><img width="300" src="images/google-sheets.png" alt="Sheets logo"></a>
+            <a href="https://trello.com/b/RQrD5Ye2" target="_blank"><img width="300" src="images/trello-logo-blue.png" alt="Trello logo"></a>
             <img src="images/exercise.gif" alt="Exercise Time">
             <aside class="notes"></aside>
         </section>
 
         <section>
             <h2>More on Async/Await</h2>
-            <p>Watch these <a href="https://docs.google.com/document/d/1uzAOfnqKt_tnuI7kWHu5Sc_jMtlzuP1EeMmN0enhSuY/edit?usp=sharing" target="_blank">Asynchronous JavaScript videos</a>.</p>
-            <a href="https://docs.google.com/spreadsheets/d/1dHybQNvrC0g8qR0Aolo75Cg68-Lc9ecrDJIfwZdYrbc/edit?usp=sharing" target="_blank"><img width="300" src="images/google-sheets.png" alt="Sheets logo"></a>
-            <img src="images/exercise.gif" alt="Exercise Time">
+            <p>Watch these <a href="https://docs.google.com/document/d/1uzAOfnqKt_tnuI7kWHu5Sc_jMtlzuP1EeMmN0enhSuY/edit#heading=h.o8hu4wbfomqd" target="_blank">Asynchronous JavaScript videos</a>.</p>
+            <!-- <a href="https://trello.com/b/RQrD5Ye2" target="_blank"><img width="300" src="images/trello-logo-blue.png" alt="Trello logo"></a>
+            <img src="images/exercise.gif" alt="Exercise Time"> -->
         </section>
         
         <!-- Slide 36 -->
@@ -821,9 +904,19 @@ fetch('https://cat-fact.herokuapp.com/facts')
 
         <!-- End Slide -->
 
-        <section>
+        <!-- <section>
             <h2>Async and JSON Roundup</h2>
             <p>Click <a href="https://docs.google.com/document/d/1V-CFUTMkB3Kd5B0V4gQPYAf1cRJDnvGejizT844Vq1s/edit?usp=sharing" target="_blank">here</a> to review.</p>
+        </section> -->
+
+        <section>
+            <h2>Async and JSON Overview</h2>
+            <ul>
+                <li class="green">Review HTML and JS's Relationship</li>
+                <li class="green">JSON</li>
+                <li class="green">Async</li>
+                <li class="green">Async/Await</li>
+            </ul>
         </section>
 
         <section style="text-align: left;">
